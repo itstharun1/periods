@@ -1,0 +1,34 @@
+.card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+
+.male{
+    padding: 30px;
+}
+.img1{
+    background-size: cover;
+    margin: 10px;
+    border-radius: 50%;
+    height: 40vh;
+}
+h1{
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+}
+.l{
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .card{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+ 
+}
