@@ -6,9 +6,14 @@ import Cookies from 'js-cookie';
 function User1() {
   const [userData, setUserData] = useState(null);
   const [showDetails, setShowDetails] = useState(false);
+  
+  
+  
 
   useEffect(() => {
     // Fetch user data from the backend by sending UserId
+   
+
     const pId = Cookies.get('profileId')
     console.log(pId)
     const fetchData = async () => {
@@ -17,10 +22,13 @@ function User1() {
         const result = await response.json();
         console.log(result.profile)
         setUserData(result.profile[0]); // Assuming there's at least one user
+        
       } catch (error) {
         console.error('Error fetching user data:', error);
       }
     };
+
+    
 
     fetchData();
   }, []);
@@ -29,6 +37,13 @@ function User1() {
     setShowDetails(!showDetails);
     console.log(userData)
   };
+
+  
+
+  
+  
+
+
 
   return (
     <div className="profile-container">

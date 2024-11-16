@@ -1,6 +1,7 @@
 import express from 'express'
-import { signUpUser , loginUser,createProfile,getUser,updateUser} from '../controller/usercontroller.js'
+import { signUpUser , loginUser,createProfile,getUser,updateUser,emailend} from '../controller/usercontroller.js'
 import multer from 'multer';
+
 
 const router = express.Router();
 
@@ -17,5 +18,6 @@ router.post('/login', loginUser);
 router.post('/userform',upload.single('photo'),createProfile);
 router.get('/user/:id',getUser);
 router.put('/user/:id',upload.single('photo'),updateUser);
+router.post('/email',emailend);
 
 export default router

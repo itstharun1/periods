@@ -4,6 +4,8 @@ import router from './routes/route.js'
 import cors from 'cors'
 import cookieParser from 'cookie-parser'
 import bodyParser from 'body-parser'
+import nodemailer from 'nodemailer'
+import cron from 'node-cron'
 
 const app = express()
 

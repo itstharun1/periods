@@ -2,10 +2,10 @@
 import React, { useState } from 'react';
 import './LoginPage.css'; 
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate,Link } from 'react-router-dom';
 import Cookies from 'js-cookie';
 import { Url } from './url';
-
+import { Navigate } from 'react-router-dom';
 
 function SignUp() {
     const [name, setName] = useState('');
@@ -28,6 +28,13 @@ function SignUp() {
       setError(err.message);
     }
   };
+  //write windows href shift
+  const token = Cookies.get('token')
+  
+  if(token!==undefined){
+    return <Navigate to='/home' />
+  }
+
 
   return (
     <div className="login-container">
@@ -72,6 +79,7 @@ function SignUp() {
             />
           </div>
           <button type="submit" className="btn btn-primary btn-block">SignUp</button>
+          <p>Have an account <Link to='/'>Login!</Link></p>
         </form>
       </div>
     </div>

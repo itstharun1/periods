@@ -3,14 +3,21 @@
     .logo-card1{
         display: flex;
         flex-direction: column;
+        height: 100vh;
+        overflow-y: auto;
+        overflow-x: hidden;
     }
     .profilec{
         width: 90vw;
         flex-grow: 1;
+        margin: 10px;
     }
     .cc{
         width: 90vw;
         flex-grow: 1;
+        background-color: aliceblue;
+        margin: 10px;
+
     }
     
 }
@@ -19,7 +26,29 @@
     .logo-card1{
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-between;
+    }
+    .profilec{
+        margin-right: 50px;
+        width: 15vw;
+        margin: 10px;
+    }
+    .cc{
+        background-color: aliceblue;
+        margin: 10px;
+        width: 70vw;
+        margin-left:50px ;
+        height: 90vh;
+
     }
     
 }
+
+.t{
+    text-align: center;
+}
+.bac{
+    background-image: url('../images/women.png');
+    background-size: cover;
+
+  }

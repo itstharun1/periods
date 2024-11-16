@@ -1,0 +1,14 @@
+.videog{
+    padding: 30px;
+    overflow-y: auto;
+    margin: 30px;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+}
+.video-item{
+    background-color: rgb(206, 214, 214);
+    padding: 40px;
+    margin: 20px;
+}

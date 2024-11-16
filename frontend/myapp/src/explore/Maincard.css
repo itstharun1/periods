@@ -1,0 +1,31 @@
+.main-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    font-weight: bold;
+    height: 100vh;
+    padding: 10px;
+}
+button{
+    background-color: aqua;
+    border-width: 0px;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.card2{
+    background-color: azure;
+    height: 80vh;
+    margin: 10px;
+    width: 90vw;
+    overflow-y: scroll;
+}
+.btns{
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}

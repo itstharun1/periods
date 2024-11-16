@@ -1,0 +1,46 @@
+.period-care {
+    overflow-y: auto;
+    max-width: 800px;
+    margin: 10px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .period-care h1 {
+    text-align: center;
+    color: #d32f2f;
+    margin-bottom: 20px;
+  }
+  
+  .period-care p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .period-care ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .period-care li {
+    background: #fff;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+  }
+  
+  .period-care li strong {
+    margin-right: 10px;
+    color: #d32f2f;
+  }
+  
+  .tharun{
+    padding: 20px;
+    margin: 20px;
+  }

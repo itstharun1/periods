@@ -1,0 +1,32 @@
+/* Timeline.css */
+.timeline-container {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px;
+    white-space: nowrap;
+    background: #f4f4f4;
+  }
+  
+  .date-circle {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    margin: 0 5px;
+    background-color: #ffffff;
+    border: 2px solid #ccc;
+    font-weight: bold;
+  }
+  
+  .current-date {
+    border-color: green;
+    color: green;
+  }
+  
+  .last-period-date {
+    border-color: red;
+    color: red;
+  }
+  

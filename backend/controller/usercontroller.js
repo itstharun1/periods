@@ -2,6 +2,9 @@ import User from "../model/user.js";
 import Profile from "../model/profile.js";
 import jwt from 'jsonwebtoken'
 import bcrypt from 'bcrypt';
+import nodemailer from 'nodemailer'
+import cron from 'node-cron'
+
 
 //signUp
 export const signUpUser =async(request,response)=>{
@@ -111,3 +114,31 @@ export const updateUser = async (req, res) => {
         res.status(500).json({ error: 'Server error' });
     }
 };
+
+//emailing
+
+const transporter = nodemailer.createTransport({
+     service: 'Gmail', 
+     auth: { user: 'tharunganjai@gmail.com', // Your email 
+        pass: 'Tarunganjai0123', // Your email password 
+        }, }); 
+        const routines = [];
+export const emailend=((req, res) => { 
+    const { email, subscribe } = req.body; 
+    if (subscribe) { 
+        const dailyRoutine = ` Good Morning! Here’s your daily routine: - 7:00 AM: Exercise - 8:00 AM: Meditation - Drink 4 liters of water throughout the day. Stay hydrated! `; 
+        cron.schedule('0 7 * * *', () => {
+             const mailOptions = { 
+                from: 'tharunganjai@gmail.com', 
+                to: email, 
+                subject: 'Daily Routine Reminder', 
+                text: dailyRoutine, 
+            }; 
+            transporter.sendMail(mailOptions, (error, info) => { 
+                if (error) { 
+                    console.log('Error:', error); 
+                } else { console.log('Email sent:', info.response); } }); });
+                 routines.push({ email }); 
+                 res.status(200).json({ message: 'Routine set successfully' }); }
+                  else { 
+                    res.status(200).json({ message: 'Subscription not activated' }); } });

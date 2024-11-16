@@ -1,0 +1,28 @@
+/* Countdown.css */
+.countdown-container {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 300px;
+    margin: 20px auto;
+  }
+  
+  .countdown-container h2 {
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .countdown-container p {
+    font-size: 24px;
+    color: #007bff;
+  }
+  
+
+.para{
+    font-weight: bold;
+    font-style: italic;
+    margin: 15px;
+}
+

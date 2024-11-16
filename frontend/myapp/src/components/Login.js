@@ -2,9 +2,11 @@
 import React, { useState } from 'react';
 import './LoginPage.css'; 
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate,Link } from 'react-router-dom';
 import Cookies from 'js-cookie';
 import { Url } from './url';
+import { Navigate } from 'react-router-dom';
+
 
 function LoginPage() {
   const [email, setEmail] = useState('');
@@ -16,7 +18,7 @@ function LoginPage() {
     e.preventDefault();
     try {
       const response = await axios.post(`${Url}/login`, { email, password });
-      Cookies.set('authToken', response.data.token, { expires: 7 });
+      Cookies.set('token', response.data.token, { expires: 7 });
       alert('login sucess') 
       navigate('/home');
     } catch (err) {
@@ -24,6 +26,12 @@ function LoginPage() {
       setError('Invalid email or password');
     }
   };
+  const token = Cookies.get('token')
+  
+  if(token!==undefined){
+    return <Navigate to='/home' />
+  }
+  
 
   return (
     <div className="login-container">
@@ -56,6 +64,7 @@ function LoginPage() {
             />
           </div>
           <button type="submit" className="btn btn-primary btn-block">Login</button>
+          <p>Dont have an account <Link to='/signup'>Create it!</Link></p>
         </form>
       </div>
     </div>

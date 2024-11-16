@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './UserForm.css';
 import { Url } from './url';
 import Cookies from 'js-cookie'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate,Navigate } from 'react-router-dom';
 
 function UserForm() {
   const navigate = useNavigate();
@@ -49,6 +49,14 @@ function UserForm() {
       console.error('Error:', error);
     }
   };
+
+  
+  const token = Cookies.get('token')
+  
+  if(token===undefined){
+    return <Navigate to='/' />
+  }
+
 
   return (
     <div className="form-container">
