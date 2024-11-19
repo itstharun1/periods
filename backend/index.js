@@ -7,6 +7,10 @@ import bodyParser from 'body-parser'
 import nodemailer from 'nodemailer'
 import cron from 'node-cron'
 
+import mongoose from 'mongoose'
+require('dotenv').config();
+
+
 const app = express()
 
 
