@@ -39,7 +39,7 @@ function SignUp() {
   return (
     <div className="login-container">
       <div className="login-form">
-        <h2 className="text-center">Login</h2>
+        <h2 className="text-center">SignUp</h2>
         {error && <p className="text-center text-danger">{error}</p>}
         <form onSubmit={handleLogin}>
           <div className="form-group">
