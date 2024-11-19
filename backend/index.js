@@ -6,9 +6,7 @@ import cookieParser from 'cookie-parser'
 import bodyParser from 'body-parser'
 import nodemailer from 'nodemailer'
 import cron from 'node-cron'
-
-import mongoose from 'mongoose'
-require('dotenv').config();
+import dotenv from 'dotenv'
 
 
 const app = express()
@@ -17,6 +15,7 @@ const app = express()
 
 // Middleware 
 app.use(express.json())
+app.use(dotenv())
 app.use(cors()); 
 app.use(bodyParser.json()); 
 app.use(bodyParser.urlencoded({ extended: true })); 
